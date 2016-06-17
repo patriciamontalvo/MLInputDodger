@@ -104,14 +104,14 @@ const double kInputViewAnimationDuration = .25f;
 - (void)setFirstResponderView:(UIView *)firstResponderView
 {
     //remove the common input accessory view who can hide input view
-    if ([_firstResponderView.inputAccessoryView isEqual:self.retractInputAccessoryView]) {
+   /* if ([_firstResponderView.inputAccessoryView isEqual:self.retractInputAccessoryView]) {
         [_firstResponderView performSelector:@selector(setInputAccessoryView:) withObject:nil];
-    }
+    }*/
     
     _firstResponderView = firstResponderView;
     
     //if no, add the common input accessory view who can hide input view
-    if (!firstResponderView.inputAccessoryView) {
+  /*  if (!firstResponderView.inputAccessoryView) {
         if (firstResponderView.dontUseDefaultRetractViewAsFirstResponderForMLInputDodger) {
             return;
         }
@@ -126,7 +126,7 @@ const double kInputViewAnimationDuration = .25f;
             self.retractInputAccessoryView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, kMLInputDodgerRetractViewDefaultHeight);
             [firstResponderView performSelector:@selector(setInputAccessoryView:) withObject:self.retractInputAccessoryView];
         }
-    }
+    }*/
 }
 
 #pragma mark - outcall
